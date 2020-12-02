@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="4"></td>
+                <td>${{ net_worth }}</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            {%for i in range(longitude)%}
+                    <tr>
+                        <td>{{ values_list[i]["symbol"] }}</td>
+                        <td>{{ values_list[i]["name"] }}</td>
+                        <td>{{ values_list[i]["shares"] }}</td>
+                        <td>${{ values_list[i]["price"] }}</td>
+                        <td>${{ values_list[i]["total"] }}</td>
+                    </tr>
+            {%endfor%}
+            <tr>
+                <td colspan="4" style="text-align:left;">CASH</td>
+                <td>${{ values_list[0]["cash"] }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
