@@ -35,6 +35,9 @@ def login_required(f):
     return decorated_function
 
 
+API Token: pk_58509b2580024502aa8fb7114d4672af
+https://cloud-sse.iexapis.com/stable/stock/{urllib.parse.quote_plus(AAPL)}/quote?token={pk_58509b2580024502aa8fb7114d4672af}
+
 def lookup(symbol):
     """Look up quote for symbol."""
 
