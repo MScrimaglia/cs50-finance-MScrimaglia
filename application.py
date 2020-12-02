@@ -371,7 +371,7 @@ def change_password():
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("change_password.html")
-    
+    1
 
 def errorhandler(e):
     """Handle error"""
